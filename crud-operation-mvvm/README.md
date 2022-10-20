@@ -1,0 +1,1 @@
+The web application is accessible via http://localhost:8080

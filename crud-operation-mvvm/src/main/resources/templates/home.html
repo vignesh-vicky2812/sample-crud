@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Todos List</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+	<div class="container my-2">
+		<h1 style="text-align: center;">List of Todos</h1>
+		<hr>
+
+		<a th:href="@{/showNewTodoForm}" class="btn btn-primary btn-sm mb-3"> Add Todo </a>
+
+		<table border="1" class="table table-striped table-responsive-md">
+			<thead>
+				<tr>
+					<th>
+						<a>
+							Title</a>
+					</th>
+					<th>
+						<a>
+							Target Date</a>
+					</th>
+					<th>
+						<a>
+							Todo Status</a>
+					</th>
+					<th> Actions </th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="todo : ${todos}">
+					<td th:text="${todo.title}"></td>
+					<td th:text="${todo.targetDate}"></td>
+					<td th:text="${todo.todoStatus}"></td>
+					<td> <a th:href="@{/showFormForUpdate/{id}(id=${todo.id})}" class="btn btn-primary">Update</a>
+						<a th:href="@{/deleteTodo/{id}(id=${todo.id})}" class="btn btn-danger">Delete</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+</body>
+
+</html>

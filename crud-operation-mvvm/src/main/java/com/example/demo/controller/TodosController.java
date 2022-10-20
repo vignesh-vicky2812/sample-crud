@@ -28,7 +28,7 @@ public class TodosController {
 	}
 	
 	@GetMapping("/showNewTodoForm")
-	public String showNewEmployeeForm(Model model) {
+	public String showNewTodoForm(Model model) {
 		Todos todo = new Todos();
 		model.addAttribute("todo", todo);
 		return "new_todo";

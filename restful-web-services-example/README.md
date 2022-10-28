@@ -8,7 +8,7 @@
 - username: username
 - password: password
 
-##APIs:
+## APIs:
 - Get Users: http://localhost:8080/users
 - Get Individual user: http://localhost:8080/users/{id}
 - Create New User: http://localhost:8080/users (POST)

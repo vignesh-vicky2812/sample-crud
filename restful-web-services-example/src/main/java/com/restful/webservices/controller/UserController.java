@@ -63,7 +63,7 @@ public class UserController {
 
 		User userForUpdate = userService.findOne(id);
 		if (user == null)
-			throw new UserNotFoundException("id- " + id);
+			throw new UserNotFoundException("id- " + id +" not found");
 		else {
 			userForUpdate.setName(user.getName());
 			userForUpdate.setBirthDate(user.getBirthDate());
@@ -81,7 +81,7 @@ public class UserController {
 	public void deleteUser(@PathVariable long id) {
 		User user = userService.findOne(id);
 		if (user == null)
-			throw new UserNotFoundException("id- " + id);
+			throw new UserNotFoundException("id- " + id +" not found");
 		else
 			userService.deleteById(id);
 

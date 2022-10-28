@@ -9,8 +9,8 @@
 - password: password
 
 ## APIs:
-- Get Users: http://localhost:8080/users
-- Get Individual user: http://localhost:8080/users/{id}
-- Create New User: http://localhost:8080/users (POST)
-- Update User: http://localhost:8080/users{id} (PUT)
-- Delete User: http://localhost:8080/users{id} (DELETE)
+- Get Users: http://localhost:8080/api/users
+- Get Individual user: http://localhost:8080/api/users/{id}
+- Create New User: http://localhost:8080/api/users (POST)
+- Update User: http://localhost:8080/api/users/{id} (PUT)
+- Delete User: http://localhost:8080/api/users/{id} (DELETE)
